@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,11 +19,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Fahrenheit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="9QS-V4-Win">
-                                <rect key="frame" x="35" y="135" width="306" height="43"/>
+                                <rect key="frame" x="7.5" y="135" width="306" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="HjK-UB-EAO"/>
                                     <constraint firstAttribute="width" constant="306" id="ZKC-J4-HVf"/>
@@ -33,7 +33,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is really" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="B4z-ML-E2D">
-                                <rect key="frame" x="128.5" y="188" width="119" height="43"/>
+                                <rect key="frame" x="101" y="188" width="119" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="WG1-Bf-oY8"/>
                                     <constraint firstAttribute="width" constant="119" id="cVc-kg-7tL"/>
@@ -42,18 +42,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="35" translatesAutoresizingMaskIntoConstraints="NO" id="xST-Si-caK">
-                                <rect key="frame" x="130" y="248" width="117" height="84"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="xST-Si-caK">
+                                <rect key="frame" x="10" y="248" width="300" height="84"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="84" id="25G-Di-r8S"/>
-                                    <constraint firstAttribute="width" constant="117" id="o7i-8c-05m"/>
+                                    <constraint firstAttribute="width" constant="300" id="ImO-Yh-p9o"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                 <color key="textColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Celsius" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="KV5-eO-nOa">
-                                <rect key="frame" x="61" y="349" width="254" height="43"/>
+                                <rect key="frame" x="33.5" y="349" width="254" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="dd0-5R-nG9"/>
                                     <constraint firstAttribute="width" constant="254" id="kA0-Ya-TtC"/>
@@ -63,7 +63,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="212" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hR2-7O-wjv">
-                                <rect key="frame" x="36" y="40" width="303" height="75"/>
+                                <rect key="frame" x="36" y="40" width="248" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="h81-2Q-dbc"/>
                                 </constraints>
@@ -106,6 +106,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="68.815592203898049"/>
         </scene>
     </scenes>
 </document>

@@ -14,7 +14,11 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var userInputValue: UITextField!
     
-    var fahrenheitValue: Measurement < UnitTemperature >?
+    var fahrenheitValue: Measurement < UnitTemperature >?{
+        didSet {
+            updateCelsiusLabel()
+        }
+    }
     var celsiusValue: Measurement < UnitTemperature >? {
         if let fahrenheitValue = fahrenheitValue {
             return fahrenheitValue.converted( to: .celsius)
@@ -22,6 +26,27 @@ class ViewController: UIViewController {
             return nil
         }
     }
+    
+    func updateCelsiusLabel() {
+        if let celsiusValue = celsiusValue {
+            celciusLabel.text = numberFormatter.string( from: NSNumber( value: celsiusValue.value))
+            
+        } else {
+            celciusLabel.text = "???"
+        }
+    }
+    
+    let numberFormatter: NumberFormatter = {
+        let nf = NumberFormatter()
+        nf.numberStyle = .decimal
+        nf.minimumFractionDigits = 0
+        nf.maximumFractionDigits = 1
+        return nf
+    }()
+    
+   
+    
+
     
     
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
@@ -33,6 +58,7 @@ class ViewController: UIViewController {
     @IBAction func tempUserInput(_ sender: Any) {
         //celciusLabel.text = userInputValue.text
         
+        /*
         if let valueInput = userInputValue.text, !valueInput.isEmpty {
             
             celciusLabel.text = valueInput
@@ -41,6 +67,12 @@ class ViewController: UIViewController {
             
             celciusLabel.text = "???"
             
+        }
+         */
+        if let valueInput = userInputValue.text, let value = Double(valueInput){
+            fahrenheitValue = Measurement(value: value, unit: .fahrenheit)
+        } else {
+            fahrenheitValue = nil
         }
         
         
@@ -53,6 +85,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        updateCelsiusLabel()
         
         
         
