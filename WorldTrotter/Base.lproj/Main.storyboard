@@ -62,7 +62,7 @@
                                 <color key="textColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hR2-7O-wjv">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="212" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hR2-7O-wjv">
                                 <rect key="frame" x="36" y="40" width="303" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="h81-2Q-dbc"/>
@@ -76,6 +76,7 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.95686274509803915" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="KV5-eO-nOa" firstAttribute="centerX" secondItem="xST-Si-caK" secondAttribute="centerX" id="75Z-MU-utc"/>
                             <constraint firstItem="9QS-V4-Win" firstAttribute="top" secondItem="hR2-7O-wjv" secondAttribute="bottom" constant="20" id="8GU-E2-tBu"/>
@@ -89,6 +90,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="hR2-7O-wjv" secondAttribute="trailing" constant="20" id="q7o-pe-c1C"/>
                             <constraint firstItem="hR2-7O-wjv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="yon-LO-n5n"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="VAb-e1-syF" appends="YES" id="Rfq-Vr-INg"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="celciusLabel" destination="xST-Si-caK" id="TUd-cl-IQk"/>
@@ -96,6 +100,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="VAb-e1-syF">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="BYZ-38-t0r" id="nzB-hI-3yk"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
         </scene>
     </scenes>

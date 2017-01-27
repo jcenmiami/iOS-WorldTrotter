@@ -14,8 +14,36 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var userInputValue: UITextField!
     
+    var fahrenheitValue: Measurement < UnitTemperature >?
+    var celsiusValue: Measurement < UnitTemperature >? {
+        if let fahrenheitValue = fahrenheitValue {
+            return fahrenheitValue.converted( to: .celsius)
+        } else {
+            return nil
+        }
+    }
+    
+    
+    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        userInputValue.resignFirstResponder()
+    }
+    
+    
+    
     @IBAction func tempUserInput(_ sender: Any) {
-        celciusLabel.text = userInputValue.text
+        //celciusLabel.text = userInputValue.text
+        
+        if let valueInput = userInputValue.text, !valueInput.isEmpty {
+            
+            celciusLabel.text = valueInput
+            
+        } else {
+            
+            celciusLabel.text = "???"
+            
+        }
+        
+        
         
         
     }
