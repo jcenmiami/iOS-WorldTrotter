@@ -72,6 +72,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
                                 <connections>
                                     <action selector="tempUserInput:" destination="BYZ-38-t0r" eventType="editingChanged" id="Fhh-SQ-UaT"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="URn-Z7-gLk"/>
                                 </connections>
                             </textField>
                         </subviews>

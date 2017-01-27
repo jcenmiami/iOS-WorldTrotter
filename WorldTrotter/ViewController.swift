@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var celciusLabel: UILabel!
     
@@ -44,7 +44,29 @@ class ViewController: UIViewController {
         return nf
     }()
     
-   
+    func textField(_ textField: UITextField,
+                   shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool {
+        
+        let existingTextHasDecimalSeparator = textField.text?.range( of: ".")
+        let replacementTextHasDecimalSeparator = string.range( of: ".")
+        
+        let charactersNotAllowed = NSCharacterSet.letters
+        let replacementTextHasLetter = string.rangeOfCharacter(from: charactersNotAllowed)
+        
+        if existingTextHasDecimalSeparator != nil, replacementTextHasDecimalSeparator != nil{
+            if replacementTextHasLetter != nil{
+                return false
+            }
+            return false
+        } else {
+            if replacementTextHasLetter != nil{
+                return false
+            }
+            return true
+        }
+        
+    }
     
 
     
